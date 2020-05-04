@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.conditionalformatter.ConditionalFormatter" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web" 
+    xmlns="http://www.mendix.com/widget/1.0/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Conditional Formatter</name>
+    <description>give a style based on a reference object</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="content" type="widgets" required="false">
+                <caption>Content</caption>
+                <description></description>
+            </property>
+            <property key="baseAttr" type="attribute" required="true">
+                <caption>Base Attribute</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                    <attributeType name="Long" />
+                </attributeTypes>
+            </property>
+            <property key="refAttr" type="attribute" required="true">
+                <caption>Reference Attribute</caption>
+                <description></description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                    <attributeType name="Long" />
+                </attributeTypes>
+            </property>
+            <property key="classMap" type="object" isList="true" required="false">
+                <caption>Classes</caption>
+                <description></description>
+                <properties>
+                    <property key="integer" type="integer" defaultValue="0" required="true">
+                        <caption>Difference</caption>
+                        <category>General</category>
+                        <description>will always be (base - reference)</description>
+                    </property>
+                    <property key="className" type="string" required="false">
+                        <caption>ClassName</caption>
+                        <category>General</category>
+                        <description></description>
+                    </property>
+                </properties>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
