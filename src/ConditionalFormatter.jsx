@@ -18,7 +18,17 @@ class ConditionalFormatter extends Component {
             return null;
         }
         const diff = baseAttr.value.minus(refAttr.value);
-        const classObj = classMap.find((cm) => { return diff.eq(cm.integer) });
+        const classObj = classMap.find((cm) => {
+            // cm.integer cm.comparison cm.className
+            if (cm.comparison === "eq") {
+                return diff.eq(cm.integer)
+            } else if (cm.comparison === "lt") {
+                return diff.minus(cm.integer) <= 0
+            } else {
+                return diff.minus(cm.integer) >= 0
+            }
+
+        });
         if (!classObj) return null;
         return classObj.className;
     }

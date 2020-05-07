@@ -38,6 +38,16 @@
                         <category>General</category>
                         <description>will always be (base - reference)</description>
                     </property>
+                    <property key="comparison" type="enumeration" defaultValue="eq" required="true">
+                        <caption>Comparison</caption>
+                        <category>General</category>
+                        <description></description>
+                        <enumerationValues>
+                            <enumerationValue key="eq">Equal</enumerationValue>
+                            <enumerationValue key="gt">Or Greater</enumerationValue>
+                            <enumerationValue key="lt">Or Less</enumerationValue>
+                        </enumerationValues>
+                    </property>
                     <property key="className" type="string" required="false">
                         <caption>ClassName</caption>
                         <category>General</category>
